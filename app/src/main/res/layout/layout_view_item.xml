@@ -1,0 +1,114 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/item_view"
+    android:longClickable="true">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/ivLabel"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/colourlabel" />
+
+        <TextView
+            android:id="@+id/edTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/title"
+            android:editable="false"
+            android:maxLines="1"
+            android:minLines="1"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lyDetailFrame"
+        android:layout_marginLeft="50dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edDetails"
+            android:hint="@string/details" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/complete"
+            android:id="@+id/cbIsCompleteList"
+            android:longClickable="false" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:gravity="top"
+            android:id="@+id/lyProgress">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/progress"
+                android:id="@+id/textView2"
+                android:singleLine="true" />
+
+            <ProgressBar
+                style="@android:style/Widget.SeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/sbProgress"
+                android:layout_weight="1"
+                android:max="100"
+                android:layout_gravity="center_horizontal|top"
+                android:progress="40" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/tvProgress"
+                android:layout_gravity="right|top"
+                android:width="50dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lyDueDate">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/duedate"
+                android:id="@+id/textView"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+                android:layout_width="127dp"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:ems="10"
+                android:id="@+id/tvDueDate"
+                android:hint="@string/duedate"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/ctl_margin">
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/has_deadline"
+        android:id="@+id/swHasDueDate"
+        android:layout_gravity="center_horizontal"
+        android:enabled="true"
+        android:clickable="true"
+        android:nestedScrollingEnabled="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/tvDueDate"
+        android:hint="@string/duedate"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/ctl_margin" />
+</LinearLayout>

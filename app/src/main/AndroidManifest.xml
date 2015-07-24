@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="uk.org.chinkara.mytodolist" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" >
+
+        <!-- android:theme="@style/AppTheme" -->
+        <activity
+            android:name=".activity.TodoListActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.TodoItemActivity"
+            android:label="@string/title_activity_todo_item" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.TodoListActivity" />
+        </activity>
+        <activity
+            android:name=".activity.UserSettingsActivity"
+            android:label="@string/title_activity_settings" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.TodoListActivity" />
+        </activity>
+
+        <receiver android:name=".TodoListWidget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/todolist_widget_info" />
+        </receiver>
+        <receiver android:name=".TodoItemWidget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/todoitem_widget_info" />
+        </receiver>
+
+        <activity
+            android:name=".model.AndroidDatabaseManager"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.TodoItemWidgetConfigure"
+            android:label="@string/title_activity_todo_item_widget_configure" >
+        </activity>
+    </application>
+
+</manifest>

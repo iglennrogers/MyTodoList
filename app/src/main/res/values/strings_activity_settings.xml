@@ -1,0 +1,19 @@
+<resources>
+    <string name="title_activity_settings">Sort Settings</string>
+    <string name="default_sort">0</string>
+
+    <string-array name="pref_sort_list_titles">
+        <item>Creation</item>
+        <item>Last Edit</item>
+        <item>Deadline</item>
+        <item>Label</item>
+    </string-array>
+
+    <string-array name="pref_sort_list_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,105 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:id="@+id/scrollView"
+    tools:context="uk.org.chinkara.mytodolist.activity.TodoItemActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            android:id="@+id/layout_topline"
+
+            <EditText
+                android:id="@+id/edTitleEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/title"
+                android:maxLines="1"
+                android:minLines="1"
+                android:layout_marginRight="50dp" />
+
+            <Spinner
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/spLabel"
+                android:layout_marginLeft="-50dp"
+                android:textAlignment="gravity"
+                android:background="#ffff003c" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_item_layout" >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edDetails"
+                android:hint="@string/details"
+                android:textAppearance="@android:style/TextAppearance.Small" />
+
+            <CheckBox
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/complete"
+                android:id="@+id/cbIsComplete"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layOrientation">
+
+                <view
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    class="uk.org.chinkara.mytodolist.ctl.SwitchableProgressCtl"
+                    android:id="@+id/ctlProgress"
+                    android:layout_marginLeft="@dimen/ctl_margin"
+                    android:layout_marginTop="@dimen/ctl_margin"
+                    android:layout_marginRight="@dimen/ctl_margin"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="@dimen/ctl_margin" />
+
+                <view
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    class="uk.org.chinkara.mytodolist.ctl.SwitchableDueDateCtl"
+                    android:id="@+id/ctlDueDate"
+                    android:layout_marginLeft="@dimen/ctl_margin"
+                    android:layout_marginRight="@dimen/ctl_margin"
+                    android:layout_marginBottom="@dimen/ctl_margin"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/ctl_margin" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            android:id="@+id/bnDelete"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+</ScrollView>

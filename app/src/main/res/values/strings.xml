@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">MyTodoList</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="todo_item_text">Todo item text</string>
+    <string name="todo_text">Todo item text</string>
+    <string name="complete">Complete?</string>
+    <string name="duedate">Due Date</string>
+    <string name="has_progress">Has Progress?</string>
+    <string name="has_deadline">Has Deadline?</string>
+
+    <string name="title">Title</string>
+    <string name="details">Details</string>
+    <string name="delete">Delete</string>
+    <string name="undelete">Undelete</string>
+    <string name="progress">Progress</string>
+    <string name="title_activity_edit_item">EditItemActivity</string>
+    <string name="label">Label</string>
+    <string name="appwidget_text">Todo List</string>
+    <string name="add_widget">Add widget</string>
+    <string name="colourlabel">Label</string>
+    <string name="add">Add</string>
+    <string name="title_activity_todo_item">Todo Item</string>
+
+    <string name="hello_world">Hello world!</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_items">No Items</string>
+    <string name="completeb">(Complete)</string>
+    <string name="title_activity_todo_item_widget_configure">Configure Item Widget</string>
+</resources>

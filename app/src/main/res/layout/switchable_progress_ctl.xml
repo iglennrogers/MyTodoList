@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_switchable_progress"
+    android:padding="@dimen/ctl_margin">
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/has_progress"
+        android:id="@+id/swHasProgress"
+        android:checked="false"
+        android:layout_gravity="center_horizontal"
+        android:clickable="true"
+        android:enabled="true"
+        android:gravity="center_horizontal" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:gravity="top"
+        android:id="@+id/lyProgress"
+        android:padding="@dimen/ctl_margin">
+
+        <SeekBar
+            style="@android:style/Widget.SeekBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sbProgress"
+            android:layout_weight="1"
+            android:max="100"
+            android:layout_gravity="center_horizontal|top"
+            android:progress="40"
+            android:splitTrack="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="50dp" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/tvProgress"
+            android:layout_gravity="right|top"
+            android:width="50dp"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignTop="@+id/sbProgress"
+            android:layout_alignBottom="@+id/sbProgress"
+            android:layout_toRightOf="@+id/sbProgress"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="false"
+            android:gravity="center|center_vertical"
+            android:layout_marginLeft="-50dp"
+            android:text="40%" />
+    </RelativeLayout>
+</LinearLayout>
